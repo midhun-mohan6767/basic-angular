@@ -5,6 +5,7 @@ import { PnfComponent } from './pages/pnf/pnf.component';
 import { CalculaterComponent } from './pages/calculater/calculater.component';
 import { TemplateFormsComponent } from './pages/template-forms/template-forms.component';
 import { ReactiveFormComponent } from './pages/reactive-form/reactive-form.component';
+import { ResponsiveComponent } from './pages/responsive/responsive.component';
 
 export const routes: Routes = [
     {path:"",component:HomeComponent},
@@ -13,5 +14,6 @@ export const routes: Routes = [
     {path:"calculater",component:CalculaterComponent},
     {path:"template-forms",component:TemplateFormsComponent},
     {path:"reactive-forms",component:ReactiveFormComponent},
+    {path:"responsive", component:ResponsiveComponent},
     {path:"**",component:PnfComponent}
 ];

@@ -1,0 +1,21 @@
+/* for the mobile */
+@media(max-width:600px){
+    .styl{
+        background-color: blue;
+    }
+}
+
+/* for the tablet */
+@media(min-width:601px) and (max-width:1024px) {
+    .styl{
+        background-color: rgb(222, 13, 27);
+    }   
+}
+/* for the desktop */
+@media(min-width:1025px){
+    .styl{
+        background-color: rgb(8, 234, 140);
+    }   
+    
+}
+
