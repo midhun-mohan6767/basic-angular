@@ -1,0 +1,36 @@
+<div class="container br">
+
+    <h1 class="text-center ">template driven forms </h1>
+<form #loginForm="ngForm" (ngSubmit)="login()">
+        <label for="">Name:
+        <input #inputName="ngModel" [(ngModel)]="name" name="name" class="ip" type="text" placeholder="enter your name" required pattern="[a-zA-Z ]*" >
+        @if (inputName.touched&&inputName.invalid) {
+            <div class="text-danger fw-bolder divInvalidName "><h5>*enter the name</h5></div>
+ 
+        }
+        <label for="">Email:
+            <input #emailInput="ngModel" [(ngModel)]="Email" name="Email" class="ip" type="text" placeholder="Enter your email" required email>
+        </label>
+        @if (emailInput.touched&&emailInput.invalid) {
+            <div class="text-danger fw-bolder emailIp"><h5>*enter the valid email</h5></div>
+
+        }
+        <label for="">password:
+            <input #phoneInput="ngModel" [(ngModel)]="password" name="phoneNu" class="ip" type="text" placeholder="enter your password" required pattern="[a-zA-Z0-9]*">
+        </label>
+    </label>
+    @if(phoneInput.invalid&&phoneInput.touched ){
+        <div class="text-danger fw-bolder phoneIp">* enter the valid password</div>
+
+    }
+    <br>
+    <button type="submit" class="bn btn" [disabled]="loginForm.invalid">submit</button>
+    
+</form>
+</div> 
+
+<div class="text-center mt-5">
+    <!-- <h1>name is:{{name}}</h1>
+    <h1>email is: {{Email}} </h1>
+    <h1>phone nu is : {{phoneNu}} </h1> -->
+</div>

@@ -1,0 +1,41 @@
+<!-- @for (item of allProducts; track $index) {
+  <h1>the product name is :    {{item.title}},
+
+</h1>
+<h2>price is :{{item.price}} </h2>
+    <br>
+    <img width="100px" height="100px" [src]="item.images" alt=" the image is missing">
+    <hr><hr><hr>
+} -->
+    <table>
+       <thead>
+   <tr>
+    <th>name</th>
+    <th>prise</th>
+    <th>image</th>
+    <th>category</th>
+    <th>rating</th>
+    <th>description</th>
+    <th>warrantyInformation</th>
+    <th>reviews</th>
+   </tr>
+       </thead>
+
+       <tbody>
+@for (item of allProducts; track $index) {
+  <tr>
+    <td> {{item.title}} </td>
+    <td>{{item.price}}</td>
+    <td> <img width="200px" height="200px" [src]="item.images" alt=""></td>
+    <td>{{item.category}}</td>
+    <td>{{item.rating}}</td>
+    <td>{{item.description}}</td>
+    <td>{{item.warrantyInformation}}</td>
+    @for (item of allProducts.reviews; track $index) {
+      <td>{{item.comment}}</td>
+
+    }
+  </tr>
+}
+       </tbody>
+    </table>  

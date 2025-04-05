@@ -1,0 +1,32 @@
+.bt{
+    background-color: brown;
+    padding: 5px;
+    font-weight: bolder;
+    font-size: larger;
+    color: rgb(206, 206, 224);
+    
+}
+.bt:hover{
+    background-color: rgb(126, 106, 106);
+}
+.ip{
+    outline: none;
+    border: solid 3px rgb(8, 153, 95);
+    background-color: bisque;
+    border-radius: 10px;
+}
+.ip:hover{
+    border-color: blue;
+    background-color: antiquewhite;
+}
+.ip1{
+    position: absolute;
+    margin-top: -50px;
+    margin-left: 85px;
+}
+.ip2{
+    position: absolute;
+    margin-top: -50px;
+    margin-left: 450px;
+
+}

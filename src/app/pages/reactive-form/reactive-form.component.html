@@ -1,0 +1,39 @@
+  <div class="container">
+    <h1 class="text-center">reactive forms</h1>
+         <div class="reactiveDiv ">
+           <form [formGroup]="loginForm" (ngSubmit)="login()" > 
+                <label>
+                 Email:   <input name="email" formControlName="email" class="m-5 ip" type="text" placeholder="email">
+                </label>
+                @if(loginForm.get('email')?.errors&&loginForm.get('email')?.touched){
+                    <div class="text-danger fw-bolder ip1">* enter the valid email</div>
+
+                }
+                <label >
+                 password:   <input name="password" formControlName="password" class="m-5 ip" type="text" placeholder="password">
+                </label>
+                @if(loginForm.get('password')?.errors&&loginForm.get('password')?.touched){
+                    <div class="text-danger fw-bolder ip2">* enter the valid password</div>
+
+                }
+                <button type="submit" class="btn bt ">submit</button>
+           </form> 
+         </div>
+</div>
+<!-- to assess the data from the login form we call the get method -->
+<!-- name atribute is used for the 2 way binding -->
+<!-- formontrol name is uaed for connect the form array and the input tag -->
+<!-- formgroup is used to link the ts -->
+<!-- hearewe didint use the ng model and the ng form -->
+
+<!-- 
+
+validation 
+=========== 
+1.create a div with err msg
+2.we get the data form the liginForm
+3.to get the data we use the get method
+4.inside the get method key passed as the string
+use: .errors and .touched
+
+-->

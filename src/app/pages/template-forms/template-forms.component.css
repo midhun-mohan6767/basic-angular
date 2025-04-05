@@ -1,0 +1,57 @@
+.ip{
+
+border-radius: 7px;
+border-width: 3px;
+border-color: blueviolet;
+background-color: rgb(219, 230, 227);
+outline-color: azure;
+box-shadow: 20px;
+margin: 20px;
+margin-bottom: 200px;
+}
+.ip:hover{
+    transition-duration: 70ms;
+    border-radius: 7px;
+    border-width: 5px;
+    border-color: rgb(22, 225, 225);
+    background-color: rgb(239, 240, 241);
+
+}
+.br{
+    justify-items: center;
+border: solid;
+border-radius: 30px;
+border-color: black;
+background-color: rgb(124, 124, 142);
+}
+.bn{
+    
+    background-color: chartreuse;
+    border: solid;
+    border-radius: 30px;
+    outline: none;
+    border-color: brown;
+    padding: 6px;
+    margin-left: 900px;
+    margin-bottom: 20px;
+}
+.bn:hover{
+    background-color: rgb(26, 194, 76);
+    transition: 1s;
+
+}
+.divInvalidName{
+    position: absolute;
+    margin-left: 69px;
+    margin-top: -200px;
+}
+.emailIp{
+    position: absolute;
+    margin-top: -200px;
+    margin-left: 350px;
+}
+.phoneIp{
+    position:absolute;
+    margin-top: -200px;
+    margin-left: 650px;
+}

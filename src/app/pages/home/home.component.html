@@ -1,0 +1,46 @@
+<div class="text-center p-5">
+                                <!-- one way data binding ts to html -->
+ <!-- string inter polation -->
+
+    <h1 >{{name}}</h1>
+    
+<!-- property binding -->
+
+     <img width="500" height="600" [src]="img" alt="">
+     <hr>
+     <button (click)="clickbtn()">click</button>
+     <br>
+
+                         <!--  one way date binding html to ts  -->
+
+ <!-- using the $event -->
+
+     <input type="text" (change)="getname($event)">
+     <br>
+     <br>
+
+ <!-- using the template reference varible -->
+
+
+     <input type="text" placeholder="age" #age>
+     <button (click)="getAge(age)">age</button>
+     <hr>
+
+                          <!-- two way dta binding -->
+
+
+ <!-- template driven using the ng model [(ngmodel)]="propety name"  . import the form modele -->
+
+<input type="text" [(ngModel)]="email" placeholder="email">
+<br>
+<h1>the email is :{{email}}</h1>
+
+
+
+
+
+
+
+
+
+</div>

@@ -1,0 +1,9 @@
+<div class="container">
+    <form class="m-5 p-5  shadow">
+        <input name="height" [(ngModel)]="height" type="text" placeholder="height" class="form-control mb-5">
+
+        <input name="weight" type="text" [(ngModel)]="weight" placeholder="weight" class="form-control">
+        <button (click)="calculate()">cheak</button>
+        <h1>bmi is:{{bmi}}</h1>
+    </form>
+</div>
