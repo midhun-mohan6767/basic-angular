@@ -1,0 +1,27 @@
+<div class="container vh-100">
+<form [formGroup]="userList" >
+    
+    <h1 class="text-center">CRUD OPERATION USING THE ARRAY</h1>
+    name:   <input name="user" formControlName="user" class="m-5 ip" type="text" placeholder="user name">;
+    update:   <input name="update" formControlName="update" class="m-5 ip" type="text" placeholder="update user">
+
+    
+    <button (click)="add()" class="btn btn-primary mx-5">add</button>
+    <button (click)="delete()" class="btn btn-danger mx-5">delete</button>
+    <!-- <button (click)="submit()" class="btn btn-warning mx-5">update the user</button> -->
+
+</form>
+<ul>
+
+@for (item of users; track $index; let i=$index;) {
+<li> {{i+1}} : {{item}}
+    <span>
+        <button (click)="final(i,item)" class="btn btn-warning mx-5 my-2">update</button>
+
+    </span>
+</li>
+}
+</ul>
+
+
+</div> 

@@ -6,6 +6,8 @@ import { CalculaterComponent } from './pages/calculater/calculater.component';
 import { TemplateFormsComponent } from './pages/template-forms/template-forms.component';
 import { ReactiveFormComponent } from './pages/reactive-form/reactive-form.component';
 import { ResponsiveComponent } from './pages/responsive/responsive.component';
+import { LoginComponent } from './login/login.component';
+import { ArrayCrudComponent } from './pages/array-crud/array-crud.component';
 
 export const routes: Routes = [
     {path:"",component:HomeComponent},
@@ -15,5 +17,7 @@ export const routes: Routes = [
     {path:"template-forms",component:TemplateFormsComponent},
     {path:"reactive-forms",component:ReactiveFormComponent},
     {path:"responsive", component:ResponsiveComponent},
+    {path:"login",component:LoginComponent},
+    {path:'arrayCrud',component:ArrayCrudComponent},
     {path:"**",component:PnfComponent}
 ];

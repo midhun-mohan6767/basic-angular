@@ -6,41 +6,88 @@
     
 <!-- property binding -->
 
-     <img width="500" height="600" [src]="img" alt="">
-     <hr>
-     <button (click)="clickbtn()">click</button>
-     <br>
-
+<div>
+         <img width="500" height="600" [src]="img" alt="">
+         <hr>
+         <button (click)="clickbtn()">click</button>
+         <br>
+    
+</div>
                          <!--  one way date binding html to ts  -->
 
  <!-- using the $event -->
-
-     <input type="text" (change)="getname($event)">
-     <br>
-     <br>
-
+<div>
+    
+         <input type="text" (change)="getname($event)">
+         <br>
+         <br>
+    
+</div>
  <!-- using the template reference varible -->
 
-
-     <input type="text" placeholder="age" #age>
-     <button (click)="getAge(age)">age</button>
-     <hr>
-
+<div>
+    
+         <input type="text" placeholder="age" #age>
+         <button (click)="getAge(age)">age</button>
+         <hr>
+    
+</div>
                           <!-- two way dta binding -->
 
 
  <!-- template driven using the ng model [(ngmodel)]="propety name"  . import the form modele -->
 
-<input type="text" [(ngModel)]="email" placeholder="email">
-<br>
-<h1>the email is :{{email}}</h1>
+<div>
+    <input type="text" [(ngModel)]="email" placeholder="email">
+    <br>
+    <h1>the email is :{{email}}</h1>
+    
+    
+</div>
+
+<!-- to see the user is active or the inactive -->
+
+<h1>user status:
+@if(userActive){
+    <span class="text-success">Active</span>
+}@else {
+    <span class="text-danger">Inactive</span>
+}
+
+</h1>
 
 
+<!-- TO DISPLAY THE ARRAY OS ITEMS -->
+ <br><br>
+<div class="mt-5">
+    <h1>display the array item using the control folw statement</h1>
+    @for (item of arrayItem; track $index;let i=$index) {
+        <h5><span>{{i+1}}.</span> {{"user name is  : "+item}} </h5>
+    }
 
 
+    
+</div>
+
+<!-- pipes -->
+
+<div >
+ <!-- date pipes -->
+
+    <h1> {{today|date}} </h1>
+    <!-- we can also change the options -->
+     <!-- short, full,medium   -->
+    <h1> {{today|date:'short'}} </h1>
 
 
+    <!-- create the custom pipes -->
 
+    <h1>{{data|uppercase|append:' -title updated'|uppercase }} </h1>
 
+    <!-- buld in pipes to make the upper case -->
+     <h4 class="text-success">{{contents|uppercase}}</h4>
+
+<!-- the build in pipes is used to  convert the data in to -->
+</div>
 
 </div>

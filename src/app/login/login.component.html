@@ -1,0 +1,15 @@
+<div class="container vh-100">
+<h1 class="text-center">login</h1>
+
+<form [formGroup]="loginForm" (ngSubmit)="login()">
+    <div class="input-group flex-nowrap m-5 w-50">
+        <input formControlName="id" name="id" type="text" class="form-control" placeholder="enter the id" aria-label="Username" aria-describedby="addon-wrapping">
+        @if(loginForm.get('id')?.errors&&loginForm.get('id')?.touched){
+            <h5 class="text-danger">invalid form</h5>
+        }
+        <button class="btn btn-success mx-5">submit</button>
+      </div>
+    
+</form>
+<!-- <h4> {{loginForm.get('id')?.value}} </h4> -->
+</div>
